@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
       };
     case "DELETE_AUTHOR":
       return {
-        authors: state.authors.filter(author => author !== action.payload)
+        authors: state.authors.filter(author => author.id !== action.payload.id)
       };
     default:
       return state;
